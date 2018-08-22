@@ -1,0 +1,317 @@
+/*****************************RESET***********************/
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/**************LAYOUT /Solo la estructura espacios, alineacion etc**************/
+
+body {
+    text-align: center;
+    /*300 son de la letra de googlefont 20px para el otro texto y 1.7 de interlineado*/
+    font: 300 20px/1.7 'Roboto Condensed';
+}
+
+.header {
+    display: flex;
+    /*centrado Horizontal*/
+    justify-content: center;
+    /*centrado vertical*/
+    align-items: center;
+    height: 450px;
+    background: url(images/fondo2.jpg) no-repeat center top;
+    /*con esta excelente propiedad logramos que la imagen rellene todo el espacio del header*/
+    background-size: cover;
+}
+
+.header img {
+    width: 150px;
+    height: 150px;
+}
+
+.navbar {
+    display: flex;
+    /*centrado Horizontal*/
+    justify-content: center;
+    /*centrado Vertical*/
+    align-items: center;
+    height: 63px;
+    background: #2199d2;
+    border-bottom: 1px dashed #fff;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    /*le decimos que son mayusculas*/
+    text-transform: uppercase;
+    /*20px de los lados*/
+    padding: 0 20px;
+    font: 20px 'Stint Ultra Condensed';
+}
+
+.tarifas {
+    /*aqui debe ir una imagen de fondo*/
+    text-align: left;
+    background: #2199d2;
+    color: #fff;
+}
+
+.quien {
+    background: #2199d2;
+    color: #fff;
+}
+
+.quien p {
+    /*maximo de ancho en los parrafos*/
+    max-width: 1055px;
+    /*centrado*/
+    margin: 0 auto;
+}
+
+.tratamientos {
+    background: #48ade4;
+    color: #fff;
+    margin: 0;
+}
+
+.tratamientos p{
+    /*maximo de ancho en los parrafos*/
+    max-width: 1055px;
+    /*centrado*/
+    margin: 0 auto;
+    padding-bottom: 25px;
+}
+
+.localizacion {
+    background: #fff;
+    padding-bottom: 0px;
+}
+
+.localizacion h2 {
+    color: #2199d2;
+}
+
+.title {
+    font: 60px 'Stint Ultra Condensed';
+    /*Texto en mayuscula*/
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+p {
+    
+    /*maximo de ancho en los parrafos*/
+    max-width: 1055px;
+    /*centrado*/
+    margin: 0 auto;
+    margin-bottom: 40px;
+
+}
+
+.content {
+    padding: 80px 0;
+}
+
+
+/*Imagenes que estan en la lista de tratamientos*/
+.list-tratamientos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.list-tratamientos li {
+    /*margen por cada lado*/
+    padding: 0 35px;
+}
+
+.list-tratamientos figure {
+    /*posicionamiento propio de figura*/
+    position: relative; 
+    height: 100px;
+    display: flex;
+    justify-content: center; /*ali horizontal*/
+    align-items: center; /*ali vertical*/
+    flex-flow: column;
+    padding-left: 20px;
+    padding-top: 10px
+
+}
+
+/*El fondo blanco en cada una de las imagenes de la lista*/
+.list-tratamientos figure:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #fff;
+    border-radius: 50%;
+    width: 130px;
+    height: 130px;
+    /*le decimos que va debajo con esta propiedad*/
+    z-index: 0;
+
+}
+
+.list-tratamientos figcaption{
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding-left: 30px;
+    bottom: -60px;
+}
+
+.list-tratamientos figure img {
+
+    width: 90px;
+    height: 90px;
+    overflow: hidden;
+    border-radius: 100px;
+    /*con esto lo ponemos encima*/
+    position:relative;
+    z-index: 1;
+}
+
+
+
+
+
